@@ -1,10 +1,16 @@
 var net = require('net');
 
-var server = net.createServer(function (socket) {
-    socket.write('Echo server\r\n');
-    socket.pipe(socket);
+var client = net.connect({port: 81},
+    function() { //'connect' listener
+        console.log('connected to server!');
+        client.write('world!\r\n');
+    });
+
+client.on('data', function(data) {
+    console.log(data.toString());
+    client.end();
 });
 
-server.listen(81, '198.58.125.19');
-
-console.log('Server running at 198.58.125.19:81/');
+client.on('end', function() {
+    console.log('disconnected from server');
+});
