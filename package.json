@@ -9,6 +9,8 @@
   "dependencies": {
     "express": "~4.10",
     "socket.io": "~1.2",
-    "swig": "~1.4"
+    "swig": "~1.4",
+    "mysql": "~2.6",
+    "orm": "~2.1"
   }
 }
