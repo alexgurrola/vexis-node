@@ -2,7 +2,7 @@
   "name": "vexis-node",
   "version": "0.0.1",
   "description": "Vexis Interface for Asynchronous Nodes",
-  "main": "http.js",
+  "main": "vexis.js",
   "author": "Alex Gurrola",
   "private": true,
   "license": "MIT",
