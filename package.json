@@ -1,5 +1,5 @@
 {
-  "name": "vexis-node",
+  "name": "vexis-server",
   "version": "0.0.1",
   "description": "Vexis Interface for Asynchronous Nodes",
   "main": "vexis.js",
@@ -7,10 +7,12 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "express": "~4.10",
-    "socket.io": "~1.2",
-    "swig": "~1.4",
-    "mysql": "~2.6",
-    "orm": "~2.1"
+    "express": "latest",
+    "multer": "latest",
+    "mysql": "latest",
+    "orm": "latest",
+    "socket.io": "latest",
+    "swig": "latest",
+    "underscore": "latest"
   }
 }
