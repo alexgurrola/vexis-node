@@ -1,14 +1,16 @@
 var net = require('net');
 
-var server = net.createServer(function (c) { //'connection' listener
-    console.log('client connected');
-    c.on('end', function () {
-        console.log('client disconnected');
+var server = net.createServer(function (socket) {
+	console.log('Client Connected!');
+	socket.on('end', function () {
+        console.log('Client Disconnected!');
     });
-    c.write('hello\r\n');
-    c.pipe(c);
+    socket.write('Hello!\r\n');
+    socket.pipe(socket);
+	//socket.end("Goodbye!\r\n");
 });
 
-server.listen(81, function () { //'listening' listener
-    console.log('server bound');
+server.listen({ port: 7900 }, function() {
+	address = server.address();
+	console.log("Listening: %j", address);
 });
